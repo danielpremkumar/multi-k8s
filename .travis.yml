@@ -6,11 +6,11 @@ env:
     - SHA=$(git rev-parse  HEAD)
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 before_install:
-  - openssl aes-256-cbc -K $encrypted_101759feaf19_key -iv $encrypted_101759feaf19_iv -in zinc-sanctuary-221223-b5d3a8687ae2.json.enc -out zinc-sanctuary-221223-b5d3a8687ae2.json -d
+  - openssl aes-256-cbc -K $encrypted_36fdef4ba1cb_key -iv $encrypted_36fdef4ba1cb_iv -in zinc-sanctuary-221223-b470026cef15.json.enc -out zinc-sanctuary-221223-b470026cef15.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate-service-account --key-file zinc-sanctuary-221223-b5d3a8687ae2.json
+  - gcloud auth activate-service-account --key-file zinc-sanctuary-221223-b470026cef15.json
   - gcloud config set project zinc-sanctuary-221223
   - gcloud config set compute/zone asia-south1-b
   - gcloud container clusters get-credentials multi-cluster
